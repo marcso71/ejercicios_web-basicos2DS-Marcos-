@@ -1,3 +1,4 @@
+/* Selector Universal: Define el comportamiento base de todos los elementos */
 * {
     margin: 0;
     padding: 0;
@@ -5,17 +6,20 @@
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* BODY: El fondo oscuro de toda la página */
 body {
     background-color: #000b18;
     color: #e0e0e0;
 }
 
+/* HEADER: Aquí es donde ponemos la imagen de fondo tecnológica */
 #mi-encabezado {
+    /* La URL es la de Vidasoft que me pasaste. El linear-gradient es para que el texto se lea mejor */
     background-image: linear-gradient(rgba(0, 11, 24, 0.7), rgba(0, 11, 24, 0.8)), 
                       url('https://vidasoft.es/wp-content/uploads/2023/12/arquitectura-del-software.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Esto hace que la imagen se quede quieta al bajar */
     height: 65vh;
     display: flex;
     flex-direction: column;
@@ -25,6 +29,7 @@ body {
     border-bottom: 3px solid #00d4ff;
 }
 
+/* NAV: Estilo de la lista de navegación */
 nav ul {
     list-style: none;
     display: flex;
@@ -32,6 +37,7 @@ nav ul {
     margin-bottom: 50px;
 }
 
+/* A: Estilo de los enlaces del menú */
 nav a {
     color: #00d4ff;
     text-decoration: none;
@@ -41,18 +47,22 @@ nav a {
     transition: 0.3s;
 }
 
+/* HOVER: Efecto neón cuando pasas el mouse por el menú */
 nav a:hover {
     color: #ffffff;
     text-shadow: 0 0 10px #00d4ff;
 }
 
+/* H1: El título principal con sombra neón */
 h1 {
-    font-size: 4rem;
+    font-size: 3.5rem; /* Ajustado para que quepa bien el texto largo */
     color: #ffffff;
     text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
-    letter-spacing: 4px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
+/* P: El eslogan debajo del título */
 #mi-encabezado p {
     font-size: 1.2rem;
     color: #00d4ff;
@@ -60,6 +70,7 @@ h1 {
     text-transform: uppercase;
 }
 
+/* .CONTENIDO: El cuadro donde va la información principal */
 .contenido {
     background-color: rgba(2, 12, 27, 0.95);
     color: #ffffff;
@@ -73,12 +84,14 @@ h1 {
     line-height: 1.8;
 }
 
+/* H2, H3: Títulos dentro del contenido */
 h2, h3 {
     color: #00d4ff;
     margin-bottom: 15px;
     text-transform: uppercase;
 }
 
+/* HR: La línea decorativa degradada */
 hr {
     border: 0;
     height: 1px;
@@ -86,6 +99,7 @@ hr {
     margin-bottom: 20px;
 }
 
+/* FOOTER: Pie de página */
 .footer {
     text-align: center;
     padding: 40px;
