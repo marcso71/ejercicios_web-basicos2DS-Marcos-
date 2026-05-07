@@ -1,0 +1,100 @@
+/* CONFIGURACION GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* ENCABEZADO ESPACIAL 80vh */
+#mi-encabezado {
+    background-image: linear-gradient(rgba(75, 0, 130, 0.5), rgba(0, 0, 0, 0.6)), 
+                      url('https://s2.best-wallpaper.net/wallpaper/1920x1200/1301/Pictures-of-beautiful-creative-design-forest-winter-planet-space_1920x1200.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+#mi-encabezado h1 {
+    font-size: 60px;
+    color: #e0b0ff; /* Morado claro */
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+}
+
+/* MENÚ MORADO */
+nav {
+    background-color: rgba(48, 0, 82, 0.9);
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    text-align: right;
+    margin-right: 50px;
+}
+
+nav li {
+    display: inline;
+    margin-left: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e0b0ff;
+}
+
+/* CONTENIDO CON BORDES REDONDOS */
+.contenido {
+    background-color: #ffffff;
+    margin: -50px auto 40px auto; /* Sube un poco para solaparse con el header */
+    padding: 50px;
+    max-width: 900px;
+    border-radius: 30px; /* Bordes bien redondos */
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+    position: relative; /* Para que el margen negativo funcione sobre el header */
+    z-index: 10;
+}
+
+.contenido h2 {
+    color: #4b0082; /* Morado fuerte */
+    margin-top: 20px;
+}
+
+.contenido p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+}
+
+/* FOOTER REDONDEADO */
+.footer {
+    background-color: #300052;
+    padding: 50px;
+    color: #ffffff;
+    text-align: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
