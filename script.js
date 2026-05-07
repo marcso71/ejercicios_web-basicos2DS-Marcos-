@@ -1,19 +1,22 @@
-// Selecciona el menú y el encabezado
-const menu = document.querySelector("nav");
-const header = document.querySelector("#mi-encabezado");
+console.log("%c Sistema de Arquitectura de Software v1.0", "color: #00d4ff; font-weight: bold; font-size: 14px;");
 
-// Función que cambia el color de fondo del menú al hacer scroll
-window.addEventListener("scroll", () => {
-    // Obtén la altura del encabezado dinámicamente
-    const headerHeight = header.offsetHeight;
-
-    if (window.scrollY > headerHeight - 50) { 
-        // Cambia a morado sólido al pasar el encabezado
-        menu.style.backgroundColor = "rgba(75, 0, 130, 1)"; 
-        menu.style.boxShadow = "0px 4px 10px rgba(0,0,0,0.3)";
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('#mi-encabezado');
+    if (window.scrollY > 50) {
+        header.style.backgroundColor = "rgba(0, 11, 24, 0.9)";
     } else {
-        // Vuelve a ser transparente o semi-transparente cuando está arriba
-        menu.style.backgroundColor = "rgba(48, 0, 82, 0.9)"; 
-        menu.style.boxShadow = "none";
+        header.style.backgroundColor = "transparent";
     }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contenido = document.querySelector('.contenido');
+    contenido.style.opacity = "0";
+    contenido.style.transform = "translateY(20px)";
+    contenido.style.transition = "all 0.8s ease-out";
+
+    setTimeout(() => {
+        contenido.style.opacity = "1";
+        contenido.style.transform = "translateY(0)";
+    }, 200);
 });
